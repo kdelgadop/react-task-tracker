@@ -8,12 +8,11 @@ require("dotenv").config()
 const express = require('express')
 const cors = require('cors')
 // const data = require('./data')
-const dbURI2 = 'mongodb+srv://kevindelgadopagan:HUjhMMZZJXCTs0iw@taskcluster.98nvd.mongodb.net/task-db?retryWrites=true&w=majority'
 const dbURI = process.env.REACT_APP_MONGODB_URI
 
 
 //MONGOOSE COLLECTION:
-mongoose.connect(dbURI2, { useUnifiedTopology: true, useNewUrlParser: true }).then((result) => {
+mongoose.connect(dbURI, { useUnifiedTopology: true, useNewUrlParser: true }).then((result) => {
   app.listen('8000', ()=> console.log("MongoDB served at http://localhost:8000/tasks"))
   });
   
